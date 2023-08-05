@@ -1,41 +1,44 @@
-# <Your-Project-Title>
+# ddd
 
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+    
 ## Description
-
+    
+fff
 
 ## Table of Contents
-
-
+    
+    
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests] (#tests)
+- [Tests](#tests)
 - [Questions](#questions)
-
+    
 ## Installation
-
+    
 To install necessary dependencies, run the following command:
-
+qqq
+    
 ## Usage
-
+    
+eee
 
 ## License
 
-This project is licensed under the MIT license.
-
+MIT
+    
 ## Contributing
-
-
-
+    
+rrr
+    
 ## Tests
-
+    
 To run tests, run the following command:
-
+www
+    
 ## Questions
-
-If you have any questions about the repo, open an issue or contact me directly at --. You can find more of my work at --.
-
+    
+If you have any questions about the repo, open an issue or contact me directly at sss. You can find more of my work at aaa.

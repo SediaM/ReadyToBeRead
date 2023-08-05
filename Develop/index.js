@@ -1,48 +1,85 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs/promises');
 
-function makeReadmePage(answers) {
-    return `# <Your-Project-Title>
+function renderLicenseBadge(license) {
+if (license === 'MIT') {
+    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+} else if (license === 'appache') {
+    return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+} else if (license === 'Mozilla') {
+    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+} else {
+    return '';
+}
 
-    ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
+}
+
+function renderLicenseLink(license) {
+    if (license === '') {
+        return ''
+    } else {
+        return '- [License](#license)';
+    }
+  
+}
+
+function renderLicenseSection(license) {
+if (license === '') {
+    return ''
+} else {
+    return 'License';
     
-    ## Description
+}
+
+}
+
+
+function makeReadmePage(answers) {
+    return `# ${answers.Project}
+
+${renderLicenseBadge(answers.License)}
+    
+## Description
+    
+${answers.Description}
+
+## Table of Contents
     
     
-    ## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+${renderLicenseLink(answers.License)}
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
     
+## Installation
     
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests] (#tests)
-    - [Questions](#questions)
+To install necessary dependencies, run the following command:
+${answers.Dependencies}
     
-    ## Installation
+## Usage
     
-    To install necessary dependencies, run the following command:
+${answers.Usage}
+
+## ${renderLicenseSection(answers.License)}
+
+${answers.License}
     
-    ## Usage
+## Contributing
     
+${answers.Contributing}
     
-    ## License
+## Tests
     
-    This project is licensed under the MIT license.
+To run tests, run the following command:
+${answers.Tests}
     
-    ## Contributing
+## Questions
     
-    
-    
-    ## Tests
-    
-    To run tests, run the following command:
-    
-    ## Questions
-    
-    If you have any questions about the repo, open an issue or contact me directly at --. You can find more of my work at --.`
+If you have any questions about the repo, open an issue or contact me directly at ${answers.email}. You can find more of my work at ${answers.username}.`
+
 }
 
 
@@ -70,17 +107,18 @@ inquirer
             name: 'Description',
         },
         {
-            type: 'input',
+            type: 'list',
             message: 'What kind of license should your project have?',
             name: 'License',
+            choices: ['appache', 'MIT', 'Mozilla', '']
         },
         {
-            default: 'input',
+            type: 'input',
             message: 'What command should be run to install dependencies?',
             name: 'Dependencies',
         },
         {
-            default: 'input',
+            type: 'input',
             message: 'What command should be run to run tests?',
             name: 'Tests',
         },
@@ -102,15 +140,5 @@ inquirer
         .then(() => console.log('File Created!'))
         .catch ((err) => console.error(err))
     })
-// TODO: Create an array of questions for user input
-// const questions = [];
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) { }
-
-// TODO: Create a function to initialize app
-// function init() { }
-
-// Function call to initialize appnpm install 
-// init();
 
