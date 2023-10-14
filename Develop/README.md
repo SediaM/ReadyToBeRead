@@ -1,10 +1,10 @@
-# ddd
+# Ready To Be Read
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
     
 ## Description
     
-fff
+I will input different information to show that it dynamic and will change due to the input.
 
 ## Table of Contents
     
@@ -20,25 +20,25 @@ fff
 ## Installation
     
 To install necessary dependencies, run the following command:
-qqq
+npm i
     
 ## Usage
     
-eee
+This is a command-line app that generates a README.md file from input in the terminal.
 
 ## License
 
-MIT
+appache
     
 ## Contributing
     
-rrr
+More sections and different licenses can be added to the README from the code.
     
 ## Tests
     
 To run tests, run the following command:
-www
+node index.js
     
 ## Questions
     
-If you have any questions about the repo, open an issue or contact me directly at sss. You can find more of my work at aaa.
+If you have any questions about the repo, open an issue or contact me directly at sediamassaquoi@gmail.com. You can find more of my work at SediaM.
